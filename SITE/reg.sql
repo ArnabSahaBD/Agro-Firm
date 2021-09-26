@@ -1,0 +1,18 @@
+SET SERVEROUTPUT ON;
+	
+DECLARE
+	B REG.CUS_NAME%TYPE:='&b';
+	C REG.AGE%TYPE:=&c;
+	D REG.ADDRESS%TYPE:='&d';
+	
+BEGIN
+	INSERT INTO REG@site_link VALUES (R_SEQ.NEXTVAL@site_link,B,C,D);
+	
+END;
+/
+
+SELECT * FROM REG@site_link;
+COMMIT;
+
+
+	
